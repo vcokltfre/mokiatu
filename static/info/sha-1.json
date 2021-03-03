@@ -1,0 +1,10 @@
+{
+  "title": "SHA-1 | Secure Hashing Algorithm 1",
+  "description": "$$sha1.md",
+  "fields": [
+    {
+      "name": "Designers",
+      "value": "National Security Agency"
+    }
+  ]
+}
