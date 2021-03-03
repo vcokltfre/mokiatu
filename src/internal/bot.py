@@ -1,6 +1,8 @@
 from discord.ext import commands
 from discord import Intents, Message
 
+from .context import Context
+
 
 class Bot(commands.Bot):
     """A subclassed version of commands.Bot with additional functionality."""
@@ -29,3 +31,6 @@ class Bot(commands.Bot):
         """Get a syndmic bot prefix."""
 
         return "." # TODO: Add dynpref logic
+
+    async def get_context(self, message: Message):
+        return await super().get_context(message, cls=Context)
