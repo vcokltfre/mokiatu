@@ -1,0 +1,10 @@
+{
+  "title": "RSA | Rivest–Shamir–Adleman",
+  "description": "$$rsa.md",
+  "fields": [
+    {
+      "name": "Designers",
+      "value": "Ron Rivest, Adi Shamir, and Leonard Adleman"
+    }
+  ]
+}
