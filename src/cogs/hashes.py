@@ -13,8 +13,14 @@ class Hashes(commands.Cog):
 
     @staticmethod
     def build_embed(hash_type: str, input: str, output, note: str = None) -> Embed:
-        embed = Embed(title=f"Hash: {hash_type}", colour=0x87CEEB, description=f"**Input:**\n```\n{input}```")
-        embed.add_field(name="Result:", value=f"```\n{output.hexdigest()}```", inline=False)
+        embed = Embed(
+            title=f"Hash: {hash_type}",
+            colour=0x87CEEB,
+            description=f"**Input:**\n```\n{input}```",
+        )
+        embed.add_field(
+            name="Result:", value=f"```\n{output.hexdigest()}```", inline=False
+        )
         embed.add_field(name="Block Size:", value=str(output.block_size), inline=True)
         embed.add_field(name="Digest Size:", value=str(output.digest_size), inline=True)
         if note:
@@ -40,16 +46,27 @@ class Hashes(commands.Cog):
         """Hash text using MD5. [Insecure]"""
         output = md5(text.encode("utf-8"))
 
-        await ctx.send(embed=self.build_embed("MD5", text, output, "MD5 is an insecure hash algorithm with known vulnerabilities and collisions."))
+        await ctx.send(
+            embed=self.build_embed(
+                "MD5",
+                text,
+                output,
+                "MD5 is an insecure hash algorithm with known vulnerabilities and collisions.",
+            )
+        )
 
     @commands.command(name="hash")
-    async def hash_sha512(self, ctx: commands.Context, name: str = None, *, text: str = None):
+    async def hash_sha512(
+        self, ctx: commands.Context, name: str = None, *, text: str = None
+    ):
         """Hash text using a user provided hash."""
         try:
             h = new(name, text.encode("utf-8"))
         except Exception as e:
             hashes_help = "Available hashes: " + ", ".join(sorted(algorithms_available))
-            return await ctx.send("No hashing algorithm found by that name!\n" + hashes_help)
+            return await ctx.send(
+                "No hashing algorithm found by that name!\n" + hashes_help
+            )
 
         await ctx.send(embed=self.build_embed(name, text, h))
 
@@ -59,10 +76,13 @@ class Hashes(commands.Cog):
         embed = Embed(title="Available Hashes", colour=0x87CEEB)
 
         for command in self.walk_commands():
-            if command.name == "hashes": continue
+            if command.name == "hashes":
+                continue
             embed.add_field(name=command.name, value=command.help, inline=False)
 
-        embed.set_footer(text="Use .hash <hash> for more specific hashes like ripemd160")
+        embed.set_footer(
+            text="Use .hash <hash> for more specific hashes like ripemd160"
+        )
 
         await ctx.send(embed=embed)
 

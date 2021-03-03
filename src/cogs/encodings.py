@@ -18,7 +18,7 @@ class Encodings(commands.Cog):
     @encode.command(name="base64", aliases=["b64"])
     async def encode_b64(self, ctx: commands.Context, *, text: str):
         """Encode text using base64 encoding."""
-        output = b64encode(text.encode('utf-8'))
+        output = b64encode(text.encode("utf-8"))
 
         await ctx.send(output.decode())
 

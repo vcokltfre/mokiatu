@@ -11,10 +11,7 @@ class Bot(commands.Bot):
         intents = Intents.default()
 
         super().__init__(
-            command_prefix=self.get_prefix,
-            intents=intents,
-            *args,
-            **kwargs
+            command_prefix=self.get_prefix, intents=intents, *args, **kwargs
         )
 
     def load_cogs(self, *cogs):
@@ -30,7 +27,7 @@ class Bot(commands.Bot):
     async def get_prefix(self, message: Message):
         """Get a syndmic bot prefix."""
 
-        return "." # TODO: Add dynpref logic
+        return "."  # TODO: Add dynpref logic
 
     async def get_context(self, message: Message):
         return await super().get_context(message, cls=Context)

@@ -33,13 +33,15 @@ class Info(commands.Cog):
                     else:
                         item[name] = value
 
-                item['color'] = 0x87CEEB
+                item["color"] = 0x87CEEB
                 self.items[file[:-5]] = item
 
     @commands.command(name="info")
     async def info(self, ctx: commands.Context, *, item: str = None):
         if item is None or item.lower() not in self.items:
-            embed = Embed(title="Information", colour=0x87CEEB, description="Info snippets:")
+            embed = Embed(
+                title="Information", colour=0x87CEEB, description="Info snippets:"
+            )
             for name in sorted(i for i in self.items):
                 embed.description += f"\n{name}"
             return await ctx.send(embed=embed)
