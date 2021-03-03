@@ -9,6 +9,7 @@ bot = Bot()
 
 bot.load_cogs(
     "src.cogs.encodings",
+    "src.cogs.hashes",
 )
 
 bot.run(getenv("TOKEN"))
