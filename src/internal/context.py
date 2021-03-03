@@ -20,7 +20,7 @@ class Context(_BaseContext):
         reference=None,
         mention_author=None
     ):
-        if content and len(content) > 2000 and (not file) and not files:
+        if content and len(content) > 2000 and not (file or files):
             file = File(StringIO(content), filename="message.txt")
             content = None
         await super().send(
