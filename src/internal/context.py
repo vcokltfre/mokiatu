@@ -7,6 +7,7 @@ class Context(_BaseContext):
     """A Custom Context for extra functionality."""
 
     async def send(
+        self,
         content=None,
         *,
         tts=False,
