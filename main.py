@@ -11,6 +11,8 @@ bot.load_cogs(
     "src.cogs.encodings",
     "src.cogs.hashes",
     "src.cogs.info",
+    "src.cogs.help",
+    "jishaku",
 )
 
 bot.run(getenv("TOKEN"))
