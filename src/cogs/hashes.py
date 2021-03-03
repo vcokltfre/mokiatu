@@ -5,7 +5,7 @@ from hashlib import sha256, sha512, md5
 from src.internal import Bot
 
 
-class Encodings(commands.Cog):
+class Hashes(commands.Cog):
     """A set of text encoding commands."""
 
     def __init__(self, bot: Bot):
@@ -55,4 +55,4 @@ class Encodings(commands.Cog):
 
 
 def setup(bot: Bot):
-    bot.add_cog(Encodings(bot))
+    bot.add_cog(Hashes(bot))
