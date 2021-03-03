@@ -1,5 +1,5 @@
 from discord.ext import commands
-from discord import Intents, Message
+from discord import Intents, Message, Game
 import logging
 
 from .context import Context
@@ -24,6 +24,7 @@ class Bot(commands.Bot):
             command_prefix='.',
             intents=intents,
             help_command=Help(),
+            activity=Game(name=".help"),
             *args,
             **kwargs,
         )
