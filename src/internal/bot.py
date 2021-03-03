@@ -21,10 +21,10 @@ class Bot(commands.Bot):
         intents = Intents.default()
 
         super().__init__(
-            command_prefix='.',
+            command_prefix='m.',
             intents=intents,
             help_command=Help(),
-            activity=Game(name=".help"),
+            activity=Game(name="m.help"),
             *args,
             **kwargs,
         )

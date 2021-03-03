@@ -10,10 +10,10 @@ class Encodings(commands.Cog):
     def __init__(self, bot: Bot):
         self.bot = bot
 
-    @commands.group(name="encode")
+    @commands.group(name="encode", invoke_without_command=True)
     async def encode(self, ctx: commands.Context):
         """A group of commands for encoding text."""
-        pass
+        await ctx.send_help("encode")
 
     @encode.command(name="base64", aliases=["b64"])
     async def encode_b64(self, ctx: commands.Context, *, text: str):
@@ -22,10 +22,10 @@ class Encodings(commands.Cog):
 
         await ctx.send(output.decode())
 
-    @commands.group(name="decode")
+    @commands.group(name="decode", invoke_without_command=True)
     async def decode(self, ctx: commands.Context):
         """A group of commands for decoding text."""
-        pass
+        await ctx.send_help("encode")
 
     @decode.command(name="base64", aliases=["b64"])
     async def decode_b64(self, ctx: commands.Context, *, text: str):

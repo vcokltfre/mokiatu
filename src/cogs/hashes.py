@@ -81,7 +81,7 @@ class Hashes(commands.Cog):
             embed.add_field(name=command.name, value=command.help, inline=False)
 
         embed.set_footer(
-            text="Use .hash <hash> for more specific hashes like ripemd160"
+            text="Use m.hash <hash> for more specific hashes like ripemd160"
         )
 
         await ctx.send(embed=embed)
