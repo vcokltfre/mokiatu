@@ -6,7 +6,7 @@ from src.internal import Bot
 
 
 class Hashes(commands.Cog):
-    """A set of text encoding commands."""
+    """A set of text hashing commands."""
 
     def __init__(self, bot: Bot):
         self.bot = bot
