@@ -56,7 +56,7 @@ class Hashes(commands.Cog):
         )
 
     @commands.command(name="hash")
-    async def hash_sha512(
+    async def hash(
         self, ctx: commands.Context, name: str = None, *, text: str = None
     ):
         """Hash text using a user provided hash."""
@@ -68,7 +68,7 @@ class Hashes(commands.Cog):
                 "No hashing algorithm found by that name!\n" + hashes_help
             )
 
-        await ctx.send(embed=self.build_embed(name, text, h))
+        await ctx.send(embed=self.build_embed(h.name, text, h))
 
     @commands.command(name="hashes")
     async def hashes(self, ctx: commands.Context):
