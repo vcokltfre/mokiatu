@@ -12,6 +12,7 @@ bot.load_cogs(
     "src.cogs.hashes",
     "src.cogs.info",
     "src.cogs.help",
+    "src.cogs.logging",
     "jishaku",
 )
 

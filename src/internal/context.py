@@ -1,10 +1,15 @@
 from discord.ext.commands import Context as _BaseContext
 from discord import File
 from io import StringIO
+from time import time
 
 
 class Context(_BaseContext):
     """A Custom Context for extra functionality."""
+
+    def __init__(self, *args, **kwargs):
+        self.start_invoke = time()
+        super().__init__(*args, **kwargs)
 
     async def send(
         self,
