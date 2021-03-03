@@ -24,14 +24,14 @@ class Context(_BaseContext):
             file = File(StringIO(content), filename="message.txt")
             content = None
         await super().send(
-            content,
-            tts,
-            embed,
-            file,
-            files,
-            delete_after,
-            nonce,
-            allowed_mentions,
-            reference,
-            mention_author,
+            content=content,
+            tts=tts,
+            embed=embed,
+            file=file,
+            files=files,
+            delete_after=delete_after,
+            nonce=nonce,
+            allowed_mentions=allowed_mentions,
+            reference=reference,
+            mention_author=mention_author,
         )
