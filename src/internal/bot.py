@@ -25,7 +25,7 @@ class Bot(commands.Bot):
                 self.load_extension(cog)
                 print(f"Cog loading: Successfully loaded {cog}")
             except Exception as e:
-                print(f"Cog loading: Failed to load: {cog}")
+                print(f"Cog loading: Failed to load: {cog}\n{e}")
 
     async def get_prefix(self, message: Message):
         """Get a syndmic bot prefix."""
