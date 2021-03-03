@@ -1,6 +1,5 @@
 from discord.ext import commands
 from base64 import b64encode, b64decode
-from hashlib import sha256
 
 from src.internal import Bot
 
