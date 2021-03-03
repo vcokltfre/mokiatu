@@ -3,3 +3,5 @@ RSA (Rivest–Shamir–Adleman) is a [public-key cryptosystem](https://en.wikipe
 In a public-key [cryptosystem](https://en.wikipedia.org/wiki/Cryptosystem), the [encryption key](https://en.wikipedia.org/wiki/Encryption_key) is public and distinct from the [decryption key](https://en.wikipedia.org/wiki/Decryption_key), which is kept secret (private). An RSA user creates and publishes a public key based on two large prime numbers, along with an auxiliary value. The prime numbers are kept secret. Messages can be encrypted by anyone, via the public key, but can only be decoded by someone who knows the prime numbers.
 
 The security of RSA relies on the practical difficulty of factoring the product of two large prime numbers, the "[factoring problem](https://en.wikipedia.org/wiki/Factoring_problem)". Breaking RSA encryption is known as the [RSA problem](https://en.wikipedia.org/wiki/RSA_problem). Whether it is as difficult as the [factoring problem](https://en.wikipedia.org/wiki/Factoring_problem) is an open question. There are no published methods to defeat the system if a large enough key is used.
+
+[Wikipedia Article](https://en.wikipedia.org/wiki/RSA_(cryptosystem))

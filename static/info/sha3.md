@@ -3,3 +3,5 @@ SHA-3 (Secure Hash Algorithm 3) is the latest member of the [Secure Hash Algorit
 SHA-3 is a subset of the broader cryptographic primitive family Keccak (/ˈkɛtʃæk/ or /ˈkɛtʃɑːk/), designed by Guido Bertoni, Joan Daemen, Michaël Peeters, and Gilles Van Assche, building upon RadioGatún. Keccak's authors have proposed additional uses for the function, not (yet) standardized by NIST, including a [stream cipher](https://en.wikipedia.org/wiki/Stream_cipher), an [authenticated encryption](https://en.wikipedia.org/wiki/Authenticated_encryption) system, a "tree" hashing scheme for faster hashing on certain architectures, and [AEAD ciphers](https://en.wikipedia.org/wiki/AEAD) Keyak and Ketje.
 
 Keccak is based on a novel approach called sponge construction. [Sponge construction](https://en.wikipedia.org/wiki/Sponge_function) is based on a wide random function or random permutation, and allows inputting ("absorbing" in sponge terminology) any amount of data, and outputting ("squeezing") any amount of data, while acting as a pseudorandom function with regard to all previous inputs. This leads to great flexibility.
+
+[Wikipedia Article](https://en.wikipedia.org/wiki/SHA-3)
