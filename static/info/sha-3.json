@@ -1,0 +1,10 @@
+{
+  "title": "SHA-3 | Secure Hashing Algorithm 3",
+  "description": "$$sha3.md",
+  "fields": [
+    {
+      "name": "Designers",
+      "value": "Guido Bertoni, Joan Daemen, Michaël Peeters, and Gilles van Assche."
+    }
+  ]
+}
