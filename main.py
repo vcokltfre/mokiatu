@@ -7,6 +7,8 @@ load_dotenv()
 
 bot = Bot()
 
-bot.load_cogs()
+bot.load_cogs(
+    "src.cogs.encodings",
+)
 
 bot.run(getenv("TOKEN"))
